@@ -225,21 +225,21 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
 		int h = Integer.parseInt(hours.getText());
 		int mm = Integer.parseInt(mins.getText());
 		int s = Integer.parseInt(secs.getText());
-		String whr = whereTf.getText();
-		int rep = Integer.parseInt(repetitionsTf.getText());
-		int rec = Integer.parseInt(recoveryTf.getText());
-		String ter = terrainTf.getText();
-		String tem = tempoTf.getText();
 		
 		if (comboBox.getSelectedIndex() == 1) {
+			int rep = Integer.parseInt(repetitionsTf.getText());
+			int rec = Integer.parseInt(recoveryTf.getText());
 			SprintEntry sprints = new SprintEntry(n, d, m, y, h, mm, s, km, rep, rec);
 			myAthletes.addEntry(sprints);
 		}
 		else if (comboBox.getSelectedIndex() == 2) {
+			String ter = terrainTf.getText();
+			String tem = tempoTf.getText();
 			CycleEntry cycle = new CycleEntry(n, d, m, y, h, mm, s, km, ter, tem);
 			myAthletes.addEntry(cycle);
 		}
 		else if (comboBox.getSelectedIndex() == 3) {
+			String whr = whereTf.getText();
 			SwimEntry cycle = new SwimEntry(n, d, m, y, h, mm, s, km, whr);
 			myAthletes.addEntry(cycle);
 		}
